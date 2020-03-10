@@ -1,32 +1,66 @@
+/* Импорт стилей, шрифтов и иконок */
+/* Сброс CSS */
 @import url("https://marksheet.io/css/reset.css");
 
-/*Контейнер для содержимого страницы*/
+
+/* Базовые стили */
+html {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
 .container {
+    display: flex;
     width: 100%;
-    max-width: 1024px;/*максимальная ширина может иметь другое значение*/
+    max-width: 1024px; /*максимальная ширина может иметь другое значение*/
     padding: 0 15px;
     margin: 0 auto;
 }
 
-/*Главное меню в шапке*/
+
+/* Предустановки */
+.row {
+    display: flex;
+    flex-direction: row;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+}
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
-    display: flex; /*обозначает, что это flex-нонтейнер*/
 }
 
-/*Главное меню в подвале*/
-footer>nav {
-    display: flex; /*обозначает, что это flex-нонтейнер*/
+
+/* Гибкая верстка */
+/* Шапка сайта */
+header {
+    flex: 0 0 auto;
 }
 
-/*Предустановки для разметки flex-элиментов:
-row-горизонтально,
-column-вертикально*/
-.row {
-    flex-direction: row;
+
+/* Основное содержимое */
+main {
+    display: flex;
+    flex: 1 0 auto;
 }
-.column {
-    flex-direction: column;
+main > div.container {
+    flex: 1 0 auto;
+}
+section {
+    flex: 3 0 auto;
+}
+aside {
+    flex: 1 0 auto;
+}
+
+
+/* Подвал сайта */
+footer {
+    flex: 0 0 auto;
 }
