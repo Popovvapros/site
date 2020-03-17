@@ -92,10 +92,12 @@ main > div.container {
     background-color: #fff;
 }
 section {
-
+    flex: 3 0 auto;/*3 - это ширина столбца*/
+    padding: 0 15;
 }
 aside {
-
+    flex: 1 0 auto;/*1 - это ширина столбца */
+    padding: 0 15;
 }
 
 
